@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package gestionalumnos;
+
+/**
+ *
+ * @author rgranada
+ */
+
+
+import java.util.ArrayList;
+
+public class GestionAlumnos {
+    public static void main(String[] args) {
+        // Crear una lista para almacenar nombres de alumnos
+        ArrayList<String> alumnos = new ArrayList<>();
+
+        // Agregar nuevos alumnos
+        alumnos.add("Ana Torres");
+        alumnos.add("Pedro Martínez");
+        alumnos.add("Lucia Gómez");
+
+        // Buscar un alumno
+        String alumnoBuscado = "Pedro Martínez";
+        if (alumnos.contains(alumnoBuscado)) {
+            System.out.println(alumnoBuscado + " está en la lista de alumnos.");
+        } else {
+            System.out.println(alumnoBuscado + " no está en la lista de alumnos.");
+        }
+
+        // Eliminar un alumno
+        alumnos.remove("Lucia Gómez");
+
+        // Mostrar la lista de alumnos
+        System.out.println("Lista de Alumnos:");
+        for (String alumno : alumnos) {
+            System.out.println(alumno);
+        }
+    }
+}
